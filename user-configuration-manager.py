@@ -2,7 +2,7 @@ def add_setting(current_settings: dict, setting: tuple):
     key = str(setting[0]).lower()
     value = str(setting[1]).lower()
     
-    if key.lower() in current_settings.keys():
+    if key in current_settings.keys():
         return f"Setting '{key}' already exists! Cannot add a new setting with this name."
     else:
         current_settings.update({key: value})
@@ -12,7 +12,7 @@ def update_setting(current_settings: dict, setting: tuple):
     key = str(setting[0]).lower()
     value = str(setting[1]).lower()
 
-    if key.lower() in current_settings.keys():
+    if key in current_settings.keys():
         current_settings.update({key: value})
         return f"Setting '{key}' updated to '{value}' successfully!"
     else:
