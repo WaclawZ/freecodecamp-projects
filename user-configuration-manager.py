@@ -17,6 +17,15 @@ def update_setting(current_settings: dict, setting: tuple):
         return f"Setting '{key}' updated to '{value}' successfully!"
     else:
         return f"Setting '{key}' does not exist! Cannot update a non-existing setting."
+    
+def delete_setting(current_settings: dict, key: str):
+    key = key.lower()
+
+    if key in current_settings.keys():
+        current_settings.pop(key)
+        return f"Setting '{key}' deleted successfully!"
+    else:
+        return "Setting not found!"
 
 test_settings = {
     'theme': 'dark',
