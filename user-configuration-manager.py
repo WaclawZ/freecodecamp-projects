@@ -3,7 +3,7 @@ def add_settings(current_settings: dict, setting: tuple):
 
 test_settings = {
     'theme': 'dark',
-    'norifications': 'enabled',
+    'notifications': 'enabled',
     'volume': 'high',
     'brightness': 75 
 }
