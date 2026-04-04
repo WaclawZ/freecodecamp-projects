@@ -26,6 +26,16 @@ def delete_setting(current_settings: dict, key: str):
         return f"Setting '{key}' deleted successfully!"
     else:
         return "Setting not found!"
+    
+def view_settings(current_settings: dict):
+    full_settings = "Current User Settings:\n"
+
+    if current_settings == {}:
+        return "No settings available."
+    else:
+        for key, value in current_settings.items():
+            full_settings += key.capitalize() + ": " + str(value) + "\n"
+        return full_settings
 
 test_settings = {
     'theme': 'dark',
