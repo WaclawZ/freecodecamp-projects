@@ -10,10 +10,10 @@ class Category:
         balance = 0
 
         for entry in self.ledger:
-            balance += entry['amount']
+            balance += entry["amount"]
 
         return balance
-    
+
     def withdraw(self, amount, description=""):
         if amount <= self.get_balance():
             self.ledger.append({"amount": -amount, "description": description})
