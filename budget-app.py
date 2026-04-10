@@ -21,6 +21,14 @@ class Category:
         else:
             return False
 
+    def transfer(self, amount, category):
+        withdraw_result = self.withdraw(amount, f"Transfer to: {category.name}")
+
+        if withdraw_result:
+            category.deposit(amount, f"Transfer from: {self.name}")
+            return True
+        else:
+            return False
 
 def create_spend_chart(categories):
     pass
