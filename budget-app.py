@@ -92,3 +92,20 @@ def create_spend_chart(categories):
     # TODO implement printing labels belows columns
 
     print(result)
+
+food = Category("Food")
+clothing = Category("Clothing")
+utilities = Category("Utilities")
+health = Category("Health")
+categories = [food, clothing, utilities, health]
+food.deposit(1000, "initial deposit")
+utilities.deposit(400)
+health.deposit(600)
+food.withdraw(10.15, "groceries")
+food.withdraw(15.89, "restaurant and more food for dessert")
+food.transfer(300, clothing)
+clothing.withdraw(10.15, "socks")
+clothing.withdraw(30.64)
+utilities.withdraw(240, "electric bill")
+health.withdraw(100, "supplements")
+create_spend_chart(categories)
