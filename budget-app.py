@@ -55,4 +55,40 @@ class Category:
 
 
 def create_spend_chart(categories):
-    pass
+    categories_summary = []
+    total_spent = 0
+    max_name_length = 0
+
+    # Prepare data for printing chart
+    for category in categories:
+        amount = 0
+        for entry in category.ledger:
+            if entry["amount"] < 0:
+                amount += -entry["amount"]
+        total_spent += amount
+        categories_summary.append({"name": category.name, "spent": round(amount, 2)})
+
+        if len(category.name) > max_name_length:
+            max_name_length = len(category.name)
+
+    for cat in categories_summary:
+        percentage = int(round(cat["spent"] / total_spent * 100, -1))
+        cat.update({"percentage": percentage})
+        cat.pop("spent")
+
+    # Print chart
+    result = ""
+
+    for i in range(100, -1, -10):
+        result += " " * (3 - len(str(i))) + str(i) + "|" + " "
+        
+        for cat in categories_summary:
+            if cat['percentage'] >= i:
+                result += "o  "
+        result += '\n'
+    
+    result += "    " + "-" * 3*len(categories_summary) + "-\n"
+
+    # TODO implement printing labels belows columns
+
+    print(result)
