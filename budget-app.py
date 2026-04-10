@@ -46,7 +46,7 @@ class Category:
 
         for entry in self.ledger:
             des = entry["description"][:23]
-            amo = str(entry["amount"])
+            amo = str(format(entry["amount"], ".2f"))
             result += des + " " * (30 - len(des) - len(amo)) + amo + "\n"
 
         result += f"Total: {self.get_balance()}"
@@ -81,17 +81,18 @@ def create_spend_chart(categories):
 
     for i in range(100, -1, -10):
         result += " " * (3 - len(str(i))) + str(i) + "|" + " "
-        
+
         for cat in categories_summary:
-            if cat['percentage'] >= i:
+            if cat["percentage"] >= i:
                 result += "o  "
-        result += '\n'
-    
-    result += "    " + "-" * 3*len(categories_summary) + "-\n"
+        result += "\n"
+
+    result += "    " + "-" * 3 * len(categories_summary) + "-\n"
 
     # TODO implement printing labels belows columns
 
     print(result)
+
 
 food = Category("Food")
 clothing = Category("Clothing")
