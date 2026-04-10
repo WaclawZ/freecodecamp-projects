@@ -77,7 +77,7 @@ def create_spend_chart(categories):
         cat.pop("spent")
 
     # Print chart
-    result = ""
+    result = "Percentage spent by category"
 
     for i in range(100, -1, -10):
         result += " " * (3 - len(str(i))) + str(i) + "|" + " "
@@ -92,6 +92,7 @@ def create_spend_chart(categories):
     # TODO implement printing labels belows columns
 
     print(result)
+    return result
 
 
 food = Category("Food")
