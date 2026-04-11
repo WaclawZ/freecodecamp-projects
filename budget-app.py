@@ -77,7 +77,7 @@ def create_spend_chart(categories):
         cat.pop("spent")
 
     # Print chart
-    result = "Percentage spent by category"
+    result = "Percentage spent by category\n"
 
     for i in range(100, -1, -10):
         result += " " * (3 - len(str(i))) + str(i) + "|" + " "
@@ -85,11 +85,26 @@ def create_spend_chart(categories):
         for cat in categories_summary:
             if cat["percentage"] >= i:
                 result += "o  "
+            else:
+                result += "   "
         result += "\n"
 
+    # Print separator line
     result += "    " + "-" * 3 * len(categories_summary) + "-\n"
 
-    # TODO implement printing labels belows columns
+    # Print labels
+    for i in range(max_name_length):
+        for index, cat in enumerate(categories_summary):
+            if index == 0:
+                result += " " * 4
+            if i < len(cat["name"]):
+                result += f" {cat['name'][i]} "
+            else:
+                result += "   "
+            if index == len(categories_summary) - 1:
+                result += " "
+        if i < max_name_length - 1:
+            result += "\n"
 
     print(result)
     return result
