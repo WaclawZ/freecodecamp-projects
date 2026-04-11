@@ -109,7 +109,6 @@ def create_spend_chart(categories):
         if i < max_name_length - 1:
             result += "\n"
 
-    print(result)
     return result
 
 
@@ -128,4 +127,4 @@ clothing.withdraw(10.15, "socks")
 clothing.withdraw(30.64)
 utilities.withdraw(240, "electric bill")
 health.withdraw(100, "supplements")
-create_spend_chart(categories)
+print(create_spend_chart(categories))
