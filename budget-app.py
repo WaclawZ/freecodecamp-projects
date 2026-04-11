@@ -1,3 +1,6 @@
+from math import trunc
+
+
 class Category:
     def __init__(self, name):
         self.name = name
@@ -72,7 +75,7 @@ def create_spend_chart(categories):
             max_name_length = len(category.name)
 
     for cat in categories_summary:
-        percentage = int(round(cat["spent"] / total_spent * 100, -1))
+        percentage = int(trunc(cat["spent"] / total_spent * 100))
         cat.update({"percentage": percentage})
         cat.pop("spent")
 
