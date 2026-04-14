@@ -36,6 +36,6 @@ class GameCharacter:
         return self._level
 
     def level_up(self):
-        self.level += 1
+        self._level += 1
         self.health, self.mana = 100, 50
         print(f"{self.name} leveled up to {self.level}!")
