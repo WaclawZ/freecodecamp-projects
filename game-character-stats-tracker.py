@@ -15,11 +15,12 @@ class GameCharacter:
 
     @health.setter
     def health(self, new_health):
-        if new_health > 100 or new_health < 0:
-            raise ValueError(
-                "Health must be a value greater than 0 and lesser than 100"
-            )
-        self._health = new_health
+        if new_health < 0:
+            self._health = 0
+        elif new_health > 100:
+            self._health = 100
+        else:
+            self._health = new_health
 
     @property
     def mana(self):
@@ -27,9 +28,12 @@ class GameCharacter:
 
     @mana.setter
     def mana(self, new_mana):
-        if new_mana > 50 or new_mana < 0:
-            raise ValueError("Mana must be a value greater than 0 and lesser than 60")
-        self._mana = new_mana
+        if new_mana < 0:
+            self._mana = 0
+        elif new_mana > 50:
+            self._mana = 50
+        else:
+            self._mana = new_mana
 
     @property
     def level(self):
