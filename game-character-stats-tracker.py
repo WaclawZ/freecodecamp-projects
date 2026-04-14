@@ -18,3 +18,13 @@ class GameCharacter:
         if new_health > 100 or new_health < 0:
             raise ValueError("Health must be a value greater than 0 and lesser than 100")
         self._health = new_health
+
+    @property
+    def mana(self):
+        return self._mana
+    
+    @mana.setter
+    def mana(self, new_mana):
+        if new_mana > 50 or new_mana < 0:
+            raise ValueError("Mana must be a value greater than 0 and lesser than 60")
+        self._mana = new_mana
