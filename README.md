@@ -1,4 +1,8 @@
-This repo contains all certifications projects from FreeCodeCamp Python Course
+This repo contains all certifications projects from FreeCodeCamp Python Course and some Lab projects
 
+#Certifications projects
 1. 'User Configuration Manager' - allows users to manage their settings such as theme, language, and notifications. Implement functions to add, update, delete, and view user settings.
 2. 'Budget App' - simple budget app that tracks spending in different categories and can show the relative spending percentage on a graph in terminal.
+
+#Lab projects
+1. 'Game Character Stats Tracker' - The program will allow you to create a character with specific attributes, update those attributes, and retrieve the current stats of the character.
