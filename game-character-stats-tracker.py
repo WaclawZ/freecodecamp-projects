@@ -30,3 +30,7 @@ class GameCharacter:
         if new_mana > 50 or new_mana < 0:
             raise ValueError("Mana must be a value greater than 0 and lesser than 60")
         self._mana = new_mana
+
+    @property
+    def level(self):
+        return self._level
