@@ -23,7 +23,7 @@ class Rectangle:
         return self._width * self._height
 
     def get_perimeter(self) -> float:
-        return 2 * (self._width * self._height)
+        return 2 * (self._width + self._height)
 
     def get_diagonal(self) -> float:
         return sqrt((self._width**2) + (self._height**2))
