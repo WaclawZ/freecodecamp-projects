@@ -1,10 +1,11 @@
 from abc import ABC, abstractmethod
 from random import choice
 
+
 class Player(ABC):
-    def __init__(self):
+    def __init__(self) -> None:
         self.moves = []
-        self.position = (0,0)
+        self.position = (0, 0)
         self.path = [self.position]
 
     def make_move(self) -> tuple:
@@ -13,7 +14,11 @@ class Player(ABC):
         self.position = new_position
         self.path.append(new_position)
         return new_position
-    
+
     @abstractmethod
-    def level_up(self):
+    def level_up(self) -> None:
         pass
+
+
+class Pawn(Player):
+    pass
