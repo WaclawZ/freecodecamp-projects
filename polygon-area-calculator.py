@@ -41,3 +41,8 @@ class Rectangle:
 
     def get_amount_inside(self, shape) -> int:
         return (self._width // shape._width) * (self._height // shape._height)
+
+
+class Square(Rectangle):
+    def __init__(self, side: int) -> None:
+        super().__init__(side, side)
