@@ -1,10 +1,13 @@
+from math import sqrt
+
+
 class Rectangle:
     def __init__(self, width: int, height: int) -> None:
         self._width = width
         self._height = height
 
     def __str__(self) -> str:
-        return f"Rectangle(width={self.width}, height={self.height})"
+        return f"Rectangle(width={self._width}, height={self._height})"
 
     def set_width(self, value: int) -> None:
         if value <= 0:
@@ -17,13 +20,13 @@ class Rectangle:
         self._height = value
 
     def get_area(self) -> float:
-        return self._width * self.set_height
+        return self._width * self._height
 
     def get_perimeter(self) -> float:
         return 2 * (self._width * self._height)
 
-    def get_diagonal():
-        pass
+    def get_diagonal(self) -> float:
+        return sqrt((self._width**2) + (self._height**2))
 
     def get_picture():
         pass
