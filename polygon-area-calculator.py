@@ -16,8 +16,8 @@ class Rectangle:
             raise ValueError("Height must be a positive number")
         self._height = value
 
-    def get_area():
-        pass
+    def get_area(self):
+        return self._width * self.set_height
 
     def get_perimeter():
         pass
