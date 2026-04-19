@@ -19,8 +19,8 @@ class Rectangle:
     def get_area(self) -> float:
         return self._width * self.set_height
 
-    def get_perimeter():
-        pass
+    def get_perimeter(self) -> float:
+        return 2 * (self._width * self._height)
 
     def get_diagonal():
         pass
