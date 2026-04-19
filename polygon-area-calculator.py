@@ -1,16 +1,20 @@
 class Rectangle:
     def __init__(self, width: int, height: int) -> None:
-        self.width = width
-        self.height = height
+        self._width = width
+        self._height = height
 
     def __str__(self) -> str:
         return f"Rectangle(width={self.width}, height={self.height})"
 
-    def set_width():
-        pass
+    def set_width(self, value):
+        if value <= 0:
+            raise ValueError("Width must be a positive number")
+        self._width = value
 
-    def set_height():
-        pass
+    def set_height(self, value):
+        if value <= 0:
+            raise ValueError("Height must be a positive number")
+        self._height = value
 
     def get_area():
         pass
