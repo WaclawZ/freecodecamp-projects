@@ -28,7 +28,7 @@ class Rectangle:
     def get_diagonal(self) -> float:
         return sqrt((self._width**2) + (self._height**2))
 
-    def get_picture(self):
+    def get_picture(self) -> str:
         if self._width > 50 or self._height > 50:
             return "Too big for picture."
         else:
@@ -39,5 +39,5 @@ class Rectangle:
                 result += "\n"
             return result
 
-    def get_amount_inside():
-        pass
+    def get_amount_inside(self, shape) -> int:
+        return (self._width // shape._width) * (self._height // shape._height)
