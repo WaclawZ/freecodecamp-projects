@@ -28,8 +28,16 @@ class Rectangle:
     def get_diagonal(self) -> float:
         return sqrt((self._width**2) + (self._height**2))
 
-    def get_picture():
-        pass
+    def get_picture(self):
+        if self._width > 50 or self._height > 50:
+            return "Too big for picture."
+        else:
+            result = ""
+            for i in range(self._height):
+                for j in range(self._width):
+                    result += "*"
+                result += "\n"
+            return result
 
     def get_amount_inside():
         pass
