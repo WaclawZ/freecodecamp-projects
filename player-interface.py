@@ -21,4 +21,9 @@ class Player(ABC):
 
 
 class Pawn(Player):
-    pass
+    def __init__(self):
+        super().__init__()
+        self.moves = [(1, 0), (0, 1), (-1, 0), (0, -1)]
+
+    def level_up(self):
+        self.moves.extend([(1, 1), (-1, 1), (1, -1), (-1, -1)])
