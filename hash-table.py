@@ -6,15 +6,18 @@ class HashTable:
         return sum([ord(c) for c in value])
 
     def add(self, key: str, value) -> None:
-        hash_value = hash(key)
+        hash_key = self.hash(key)
 
-        if hash_value in self.collection:
-            self.collection[hash_value][key] = value
+        if hash_key in self.collection:
+            self.collection[hash_key][key] = value
         else:
-            self.collection[hash_value] = value
+            self.collection[hash_key] = value
 
-    def remove():
-        pass
+    def remove(self, key: str) -> None:
+        hash_key = self.hash(key)
+
+        if hash_key in self.collection:
+            del self.collection[hash_key]
 
     def lookup():
         pass
