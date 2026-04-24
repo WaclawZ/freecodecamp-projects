@@ -19,5 +19,10 @@ class HashTable:
         if hash_key in self.collection:
             del self.collection[hash_key]
 
-    def lookup():
-        pass
+    def lookup(self, key: str) -> None:
+        hash_key = self.hash(key)
+
+        if hash_key in self.collection:
+            return self.collection[hash_key]
+        else:
+            return None
