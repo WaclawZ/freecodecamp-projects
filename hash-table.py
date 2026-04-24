@@ -1,5 +1,6 @@
 class HashTable:
-    collection = {}
+    def __init__(self) -> None:
+        self.collection = {}
 
     def hash():
         pass
