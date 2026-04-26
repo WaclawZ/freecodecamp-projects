@@ -10,3 +10,6 @@ This repo contains all certifications projects from FreeCodeCamp Python Course a
 1. 'Game Character Stats Tracker' - The program will allow you to create a character with specific attributes, update those attributes, and retrieve the current stats of the character.
 2. 'Player interface' - project requires building an inheritance-based Python system where an abstract Player class handles movement logic and a concrete Pawn class implements specific coordinate-based navigation and leveling capabilities.
 3. 'Bisection Method' - In this lab, you will implement a function that uses the bisection method to find the square root of a number.
+4. 'Quicksort Algorithm'
+5. 'Selection Sort Algorithm'
+6. 'Luhn Algorithm'
