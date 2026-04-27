@@ -5,6 +5,7 @@ This repo contains all certifications projects from FreeCodeCamp Python Course a
 2. 'Budget App' - simple budget app that tracks spending in different categories and can show the relative spending percentage on a graph in terminal.
 3. 'Polygon Area Calculator' - In this project, you will use object-oriented programming to create a Rectangle class and a Square class. The Square class should be a subclass of Rectangle and inherit its methods and attributes.
 4. 'Build a Hash Table' - In this project, you will build a hash table from scratch. A hash table is a data structure that stores key-value pairs. A hash table works by taking the key as an input and then hashing this key according to a specific hashing function.
+5. 'Tower of Hanoi Algorithm' - In this project, you will solve the mathematical puzzle known as the Tower of Hanoi. The puzzle consists of three rods and a number of disks of different diameters.
 
 # Lab projects
 1. 'Game Character Stats Tracker' - The program will allow you to create a character with specific attributes, update those attributes, and retrieve the current stats of the character.
