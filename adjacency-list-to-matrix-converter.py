@@ -5,5 +5,6 @@ def adjacency_list_to_matrix(dictionary: dict) -> list:
     for key, value in dictionary.items():
         for el in value:
             matrix[key][el] = 1
+        print(matrix[key])
 
     return matrix
