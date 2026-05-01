@@ -14,3 +14,4 @@ This repo contains all certifications projects from FreeCodeCamp Python Course a
 4. 'Quicksort Algorithm'
 5. 'Selection Sort Algorithm'
 6. 'Luhn Algorithm'
+7. 'Adjacency List to Matrix Converter' - In this lab, you will build a function that converts an adjacency list representation of a graph into an adjacency matrix.
